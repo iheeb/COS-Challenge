@@ -4,7 +4,7 @@ import 'package:cos_challenge/core/exceptions/failure.dart';
 import 'package:cos_challenge/core/services/local_storage_service.dart';
 import 'package:cos_challenge/core/utils/app_strings.dart';
 import 'package:cos_challenge/features/vehicle_selection/infrastructure/vehicle_option.dart';
-import 'package:cos_challenge/snippet.dart';
+import 'package:cos_challenge/cos-mock-server/snippet.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class VinRepository {
