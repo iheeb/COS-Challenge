@@ -20,6 +20,5 @@ class ParseFailure extends Failure {
 
 class RedirectFailure extends Failure {
   final List<VehicleOption> options;
-  RedirectFailure(this.options)
-    : super('Multiple matches found. Please select the correct vehicle.');
+  RedirectFailure(this.options) : super(FailureStrings.redirectError);
 }

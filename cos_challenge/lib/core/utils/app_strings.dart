@@ -29,12 +29,25 @@ class VehicleSelectionStrings {
   static const similarity = 'Similarity:';
 }
 
+class AuctionStrings {
+  static const auctionResult = 'Vin Scan Result';
+  static const model = 'Model: ';
+  static const uuid = 'UUID: ';
+  static const price = 'Price: €';
+  static const feedback = 'Feedback: ';
+  static const feedbackPositive = 'Positive feedback';
+  static const feedbackNegative = 'Negative feedback';
+  static const feedbackNotAvailable = 'Feedback not available';
+}
+
 class FailureStrings {
   static const String networkError =
       'No internet connection. Check your network and try again.';
   static const String serverError = 'Server error. Please try again later.';
   static const String parseError =
       'Received unexpected data. Try a different VIN or contact support.';
+  static const String redirectError =
+      'Multiple matches found. Please select a vehicle.';
 }
 
 class HiveStrings {
