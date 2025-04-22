@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class VinInputScreen extends StatelessWidget {
+class VinInputScreen extends ConsumerStatefulWidget {
   const VinInputScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+  ConsumerState<VinInputScreen> createState() => _VinInputScreenState();
 }
+
+class _VinInputScreenState extends ConsumerState<VinInputScreen> {}
