@@ -17,6 +17,10 @@
 - Hive
 - SharedPreferences
 
+## 🗂 Git versioning
+- This GitHub repo is used to showcase the usage of a clean commit history and Git Flow methodology to simulate realistic development progression.
+Features were developed incrementally in feature branches, then merged into develop, and finally released to main.
+
 ## 🧱 Architecture
 - Modular architecture inspired by Clean Architecture 
 - MVVM principles
@@ -26,7 +30,12 @@
 - flutter pub get
 - flutter run
 
-## 🧪 Testing (VIN Controller)
+## 🧪 Testing 
 - flutter test
+
+Tests cover different server response handling 
+- Success (200)
+- Redirect(300)
+- Failure (400)
 
 ## 🙏 Thank You
