@@ -65,10 +65,10 @@ class VinRepository {
       final options =
           decoded.map((e) {
             return VehicleOption(
-              model: e['model'] ?? 'Unknown',
-              uuid: e['externalId'] ?? 'Unknown',
+              model: e['model'] ?? AppStrings.unknown,
+              uuid: e['externalId'] ?? AppStrings.unknown,
               similarity: e['similarity'] ?? 0,
-              make: e['make'] ?? 'NA',
+              make: e['make'] ?? AppStrings.notAvailable,
               containerName: e['containerName'],
               feedback: e['feedback'],
               positiveCustomerFeedback: e['positiveCustomerFeedback'],

@@ -1,5 +1,7 @@
 class AppStrings {
   static const String appName = 'MyApp';
+  static const String unknown = 'Unknown';
+  static const String notAvailable = 'N/A';
 }
 
 class UserIdStrings {
@@ -20,6 +22,11 @@ class VinInputStrings {
   static const vinInvalid =
       'Invalid VIN. It should be 17 chars, alphanumeric, no I/O/Q.';
   static const vinSubmit = 'Submit';
+}
+
+class VehicleSelectionStrings {
+  static const selectVehicle = 'Select Vehicle';
+  static const similarity = 'Similarity:';
 }
 
 class FailureStrings {
