@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:cos_challenge/core/exceptions/failure.dart';
 import 'package:cos_challenge/core/services/local_storage_service.dart';
 import 'package:cos_challenge/core/utils/app_strings.dart';
+import 'package:cos_challenge/features/vehicle_selection/infrastructure/vehicle_option.dart';
 import 'package:cos_challenge/snippet.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -46,9 +47,37 @@ class VinRepository {
     }
   }
 
-  Map<String, dynamic> _handleSuccess(dynamic decoded) {}
+  Map<String, dynamic> _handleSuccess(dynamic decoded) {
+    final box = Hive.box(HiveStrings.auctionCache);
+    if (decoded is Map<String, dynamic>) {
+      box.put(HiveStrings.cachedAuctionData, decoded);
+      return decoded;
+    } else if (decoded is List) {
+      final wrapped = {'options': decoded};
+      box.put(HiveStrings.cachedAuctionData, wrapped);
+      return wrapped;
+    }
+    throw ParseFailure();
+  }
 
-  Never _handle300(dynamic decoded) {}
+  Never _handle300(dynamic decoded) {
+    if (decoded is List) {
+      final options =
+          decoded.map((e) {
+            return VehicleOption(
+              model: e['model'] ?? 'Unknown',
+              uuid: e['externalId'] ?? 'Unknown',
+              similarity: e['similarity'] ?? 0,
+              make: e['make'] ?? 'NA',
+              containerName: e['containerName'],
+              feedback: e['feedback'],
+              positiveCustomerFeedback: e['positiveCustomerFeedback'],
+            );
+          }).toList();
+      throw RedirectFailure(options);
+    }
+    throw ParseFailure();
+  }
 
   ServerFailure _handle400(dynamic decoded) {
     if (decoded is Map && decoded.containsKey('message')) {

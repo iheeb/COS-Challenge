@@ -3,6 +3,7 @@ import 'package:cos_challenge/core/utils/app_strings.dart';
 import 'package:cos_challenge/core/utils/snackbar_utils.dart';
 import 'package:cos_challenge/core/utils/vin_validator.dart';
 import 'package:cos_challenge/features/auction_data/presentation/screens/auction_screen.dart';
+import 'package:cos_challenge/features/vehicle_selection/presentation/screens/vehicle_selection_screen.dart';
 import 'package:cos_challenge/features/vin_input/application/vin_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

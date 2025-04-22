@@ -15,4 +15,10 @@ class VinController extends AsyncNotifier<Map<String, dynamic>?> {
     repository = ref.read(vinServiceProvider);
     return null;
   }
+
+  Future<void> fetchVin(String vin) async {
+    state = const AsyncLoading();
+
+    state = await AsyncValue.guard(() => repository.fetchVin(vin));
+  }
 }
