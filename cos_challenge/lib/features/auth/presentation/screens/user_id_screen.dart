@@ -36,7 +36,7 @@ class UserIdScreenState extends ConsumerState<UserIdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(UserIdStrings.userWelcom)),
+      appBar: AppBar(title: Text(UserIdStrings.userWelcome)),
       body: Padding(
         padding: EdgeInsets.all(24),
         child: Form(

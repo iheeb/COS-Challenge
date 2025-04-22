@@ -16,3 +16,8 @@ class ServerFailure extends Failure {
 class ParseFailure extends Failure {
   ParseFailure() : super(FailureStrings.parseError);
 }
+
+class RedirectFailure extends Failure {
+  RedirectFailure()
+    : super('Multiple matches found. Please select the correct vehicle.');
+}
