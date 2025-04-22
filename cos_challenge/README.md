@@ -1,16 +1,32 @@
-# cos_challenge
+# COS_challenge 🚗
 
-A new Flutter project.
+- This app was built as part of the CarOnSale Flutter coding challenge.
 
-## Getting Started
+## 🔧 Features
+- User ID input with SharedPreferences storage (auto-skip on relaunch)
+- VIN input with validation and error feedback
+- Server response handling 200 / 300 / 400
+- Vehicle selection (300 response)
+- Vin scan result display with feedback indicator
+- Data caching using Hive and using it as a fallback
+- Light/Dark mode support
 
-This project is a starting point for a Flutter application.
+## 📂 Tech Stack
+- Flutter
+- Riverpod
+- Hive
+- SharedPreferences
 
-A few resources to get you started if this is your first Flutter project:
+## 🧱 Architecture
+- Modular architecture inspired by Clean Architecture 
+- MVVM principles
+- Riverpod for state management and dependency injection
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Running the App
+- flutter pub get
+- flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧪 Testing (VIN Controller)
+- flutter test
+
+## 🙏 Thank You
